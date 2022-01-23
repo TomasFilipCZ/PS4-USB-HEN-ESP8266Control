@@ -1,0 +1,628 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "USB Flashdisk PSx HEN Control with ESP8266"
+Date "2022-01-20"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L wemos_mini:WeMos_D1_mini U1
+U 1 1 61E880D2
+P 2550 3250
+F 0 "U1" H 2550 3993 60  0000 C CNN
+F 1 "WeMos_D1_mini" H 2550 3887 60  0000 C CNN
+F 2 "wemos-d1-mini:wemos-d1-mini-connectors-only" H 3100 2550 60  0001 C CNN
+F 3 "http://www.wemos.cc/Products/d1_mini.html" H 2550 3781 60  0000 C CNN
+	1    2550 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 61E88CC5
+P 3650 3700
+F 0 "#PWR0101" H 3650 3450 50  0001 C CNN
+F 1 "GND" H 3655 3527 50  0000 C CNN
+F 2 "" H 3650 3700 50  0001 C CNN
+F 3 "" H 3650 3700 50  0001 C CNN
+	1    3650 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 3500 3650 3500
+Wire Wire Line
+	3650 3500 3650 3700
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 61E89D71
+P 6900 1550
+F 0 "J1" H 6957 2017 50  0000 C CNN
+F 1 "USB_B_Micro" H 6957 1926 50  0000 C CNN
+F 2 "usb-hen-esp:USB_Micro-Jing Extension" H 7050 1500 50  0001 C CNN
+F 3 "~" H 7050 1500 50  0001 C CNN
+	1    6900 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_A J2
+U 1 1 61E8D4AB
+P 6950 3150
+F 0 "J2" H 7007 3617 50  0000 C CNN
+F 1 "USB_A" H 7007 3526 50  0000 C CNN
+F 2 "Connector_USB:USB_A_Molex_67643_Horizontal" H 7100 3100 50  0001 C CNN
+F 3 "" H 7100 3100 50  0001 C CNN
+	1    6950 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 3150 7500 3150
+Wire Wire Line
+	7250 3250 7500 3250
+Text Label 7250 3150 0    50   ~ 0
+USB_D+
+Text Label 7250 3250 0    50   ~ 0
+USB_D-
+Wire Wire Line
+	7200 1550 7550 1550
+Wire Wire Line
+	7200 1650 7550 1650
+Text Label 7250 1550 0    50   ~ 0
+USB_D+
+Text Label 7250 1650 0    50   ~ 0
+USB_D-
+$Comp
+L power:GND #PWR0102
+U 1 1 61E8FFCF
+P 6800 2100
+F 0 "#PWR0102" H 6800 1850 50  0001 C CNN
+F 1 "GND" H 6805 1927 50  0000 C CNN
+F 2 "" H 6800 2100 50  0001 C CNN
+F 3 "" H 6800 2100 50  0001 C CNN
+	1    6800 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 1950 6800 2100
+Wire Wire Line
+	6800 2100 6900 2100
+Wire Wire Line
+	6900 2100 6900 1950
+Connection ~ 6800 2100
+$Comp
+L power:GND #PWR0103
+U 1 1 61E90ABB
+P 6850 3700
+F 0 "#PWR0103" H 6850 3450 50  0001 C CNN
+F 1 "GND" H 6855 3527 50  0000 C CNN
+F 2 "" H 6850 3700 50  0001 C CNN
+F 3 "" H 6850 3700 50  0001 C CNN
+	1    6850 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 3650 6950 3650
+Wire Wire Line
+	6950 3650 6950 3550
+Wire Wire Line
+	6850 3550 6850 3650
+Connection ~ 6850 3650
+Wire Wire Line
+	6850 3650 6850 3700
+$Comp
+L power:+5V #PWR0104
+U 1 1 61E92170
+P 7650 1200
+F 0 "#PWR0104" H 7650 1050 50  0001 C CNN
+F 1 "+5V" H 7665 1373 50  0000 C CNN
+F 2 "" H 7650 1200 50  0001 C CNN
+F 3 "" H 7650 1200 50  0001 C CNN
+	1    7650 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0105
+U 1 1 61E92FE4
+P 3200 3600
+F 0 "#PWR0105" H 3200 3450 50  0001 C CNN
+F 1 "+5V" V 3215 3728 50  0000 L CNN
+F 2 "" H 3200 3600 50  0001 C CNN
+F 3 "" H 3200 3600 50  0001 C CNN
+	1    3200 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 3600 3100 3600
+Wire Wire Line
+	3100 3700 3100 3600
+Connection ~ 3100 3600
+Wire Wire Line
+	3100 3600 3200 3600
+$Comp
+L power:GND #PWR0106
+U 1 1 61E96094
+P 3100 4050
+F 0 "#PWR0106" H 3100 3800 50  0001 C CNN
+F 1 "GND" H 3105 3877 50  0000 C CNN
+F 2 "" H 3100 4050 50  0001 C CNN
+F 3 "" H 3100 4050 50  0001 C CNN
+	1    3100 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 3900 3100 4050
+Wire Wire Line
+	7200 1350 7650 1350
+Wire Wire Line
+	7650 1350 7650 1200
+$Comp
+L 0Keyhas_C0805_Basic:22uF_25V C6
+U 1 1 61E96D94
+P 7850 1450
+F 0 "C6" H 7942 1496 50  0000 L CNN
+F 1 "22uF_25V" H 7942 1405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7888 1300 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Samsung-Electro-Mechanics-CL21A226MAQNNNE_C45783.pdf" V 7850 1450 50  0001 C CNN
+F 4 "C45783" V 7850 1450 50  0001 C CNN "LCSC"
+	1    7850 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 1350 7850 1350
+Connection ~ 7650 1350
+$Comp
+L power:GND #PWR0107
+U 1 1 61E9844B
+P 7850 1700
+F 0 "#PWR0107" H 7850 1450 50  0001 C CNN
+F 1 "GND" H 7855 1527 50  0000 C CNN
+F 2 "" H 7850 1700 50  0001 C CNN
+F 3 "" H 7850 1700 50  0001 C CNN
+	1    7850 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 1550 7850 1700
+$Comp
+L power:+5VP #PWR0108
+U 1 1 61E98E21
+P 7400 2850
+F 0 "#PWR0108" H 7400 2700 50  0001 C CNN
+F 1 "+5VP" H 7415 3023 50  0000 C CNN
+F 2 "" H 7400 2850 50  0001 C CNN
+F 3 "" H 7400 2850 50  0001 C CNN
+	1    7400 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 2950 7400 2950
+Wire Wire Line
+	7400 2950 7400 2850
+Wire Wire Line
+	7500 2950 7400 2950
+Connection ~ 7400 2950
+$Comp
+L power:GND #PWR0109
+U 1 1 61E9B203
+P 7800 2950
+F 0 "#PWR0109" H 7800 2700 50  0001 C CNN
+F 1 "GND" V 7805 2822 50  0000 R CNN
+F 2 "" H 7800 2950 50  0001 C CNN
+F 3 "" H 7800 2950 50  0001 C CNN
+	1    7800 2950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7700 2950 7800 2950
+$Comp
+L 0Keyhas_transistors_N:2N7002 Q1
+U 1 1 61E9CAD8
+P 5500 5950
+F 0 "Q1" H 5704 6041 50  0000 L CNN
+F 1 "2N7002" H 5704 5950 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5700 5875 50  0001 L CIN
+F 3 "https://www.diodes.com/assets/Datasheets/ds30896.pdf" H 5500 5950 50  0001 L CNN
+F 4 "C8545" H 5704 5859 50  0001 L CNN "JLCSMT"
+	1    5500 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 61EAC9CC
+P 5600 6300
+F 0 "#PWR0110" H 5600 6050 50  0001 C CNN
+F 1 "GND" H 5605 6127 50  0000 C CNN
+F 2 "" H 5600 6300 50  0001 C CNN
+F 3 "" H 5600 6300 50  0001 C CNN
+	1    5600 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 6150 5600 6300
+Wire Wire Line
+	5300 5950 5050 5950
+$Comp
+L power:GND #PWR0111
+U 1 1 61EB1F91
+P 5050 6400
+F 0 "#PWR0111" H 5050 6150 50  0001 C CNN
+F 1 "GND" H 5055 6227 50  0000 C CNN
+F 2 "" H 5050 6400 50  0001 C CNN
+F 3 "" H 5050 6400 50  0001 C CNN
+	1    5050 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:AO3401A Q2
+U 1 1 61EB30F7
+P 5600 5000
+F 0 "Q2" V 5942 5000 50  0000 C CNN
+F 1 "AO3401A" V 5851 5000 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5800 4925 50  0001 L CIN
+F 3 "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf" H 5600 5000 50  0001 L CNN
+	1    5600 5000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6100 4950 6100 4900
+Wire Wire Line
+	6100 5150 6100 5300
+Wire Wire Line
+	5800 4900 6100 4900
+Connection ~ 6100 4900
+Wire Wire Line
+	5600 5200 5600 5300
+Wire Wire Line
+	5600 5300 6100 5300
+Wire Wire Line
+	5600 5300 5600 5400
+Connection ~ 5600 5300
+Wire Wire Line
+	5600 5600 5600 5750
+Wire Wire Line
+	6450 4900 6450 5000
+Wire Wire Line
+	6100 4900 6450 4900
+Wire Wire Line
+	6100 5300 6450 5300
+Wire Wire Line
+	6450 5300 6450 5200
+Connection ~ 6100 5300
+$Comp
+L power:+5V #PWR0112
+U 1 1 61EC043E
+P 6100 4750
+F 0 "#PWR0112" H 6100 4600 50  0001 C CNN
+F 1 "+5V" H 6115 4923 50  0000 C CNN
+F 2 "" H 6100 4750 50  0001 C CNN
+F 3 "" H 6100 4750 50  0001 C CNN
+	1    6100 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 4750 6100 4900
+$Comp
+L power:+5VP #PWR0113
+U 1 1 61EC1C2B
+P 4700 4750
+F 0 "#PWR0113" H 4700 4600 50  0001 C CNN
+F 1 "+5VP" H 4715 4923 50  0000 C CNN
+F 2 "" H 4700 4750 50  0001 C CNN
+F 3 "" H 4700 4750 50  0001 C CNN
+	1    4700 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 4750 4700 4900
+Wire Wire Line
+	2050 3600 1700 3600
+Wire Wire Line
+	1700 3600 1700 3700
+$Comp
+L power:GND #PWR0114
+U 1 1 61EC5323
+P 1700 4050
+F 0 "#PWR0114" H 1700 3800 50  0001 C CNN
+F 1 "GND" H 1705 3877 50  0000 C CNN
+F 2 "" H 1700 4050 50  0001 C CNN
+F 3 "" H 1700 4050 50  0001 C CNN
+	1    1700 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 3900 1700 4050
+$Comp
+L power:+3.3V #PWR0115
+U 1 1 61EC9CA4
+P 1400 3600
+F 0 "#PWR0115" H 1400 3450 50  0001 C CNN
+F 1 "+3.3V" V 1415 3728 50  0000 L CNN
+F 2 "" H 1400 3600 50  0001 C CNN
+F 3 "" H 1400 3600 50  0001 C CNN
+	1    1400 3600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1400 3600 1700 3600
+Connection ~ 1700 3600
+Wire Wire Line
+	5050 5950 4750 5950
+Connection ~ 5050 5950
+Text Label 4800 5950 0    50   ~ 0
+USBP
+Wire Wire Line
+	2050 3400 1450 3400
+Text Label 1550 3400 0    50   ~ 0
+USBP
+$Comp
+L Power_Protection:USBLC6-2SC6 U2
+U 1 1 61EDF0FD
+P 9350 2450
+F 0 "U2" H 9550 2050 50  0000 C CNN
+F 1 "USBLC6-2SC6" H 9700 2950 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 9350 1950 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/usblc6-2.pdf" H 9550 2800 50  0001 C CNN
+	1    9350 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0118
+U 1 1 61EE363D
+P 9350 1750
+F 0 "#PWR0118" H 9350 1600 50  0001 C CNN
+F 1 "+5V" H 9365 1923 50  0000 C CNN
+F 2 "" H 9350 1750 50  0001 C CNN
+F 3 "" H 9350 1750 50  0001 C CNN
+	1    9350 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 1750 9350 2050
+$Comp
+L power:GND #PWR0119
+U 1 1 61EE5379
+P 9350 3050
+F 0 "#PWR0119" H 9350 2800 50  0001 C CNN
+F 1 "GND" H 9355 2877 50  0000 C CNN
+F 2 "" H 9350 3050 50  0001 C CNN
+F 3 "" H 9350 3050 50  0001 C CNN
+	1    9350 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 2850 9350 3050
+Wire Wire Line
+	8950 2350 8650 2350
+Wire Wire Line
+	8950 2550 8650 2550
+Text Label 8650 2350 0    50   ~ 0
+USB_D-
+Text Label 8650 2550 0    50   ~ 0
+USB_D-
+Wire Wire Line
+	9750 2350 10100 2350
+Wire Wire Line
+	9750 2550 10100 2550
+Text Label 9800 2350 0    50   ~ 0
+USB_D+
+Text Label 9800 2550 0    50   ~ 0
+USB_D+
+Wire Wire Line
+	900  1250 900  1350
+$Comp
+L power:GND #PWR0120
+U 1 1 61EF212B
+P 900 1800
+F 0 "#PWR0120" H 900 1550 50  0001 C CNN
+F 1 "GND" H 905 1627 50  0000 C CNN
+F 2 "" H 900 1800 50  0001 C CNN
+F 3 "" H 900 1800 50  0001 C CNN
+	1    900  1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  1650 900  1800
+$Comp
+L power:+5VP #PWR0121
+U 1 1 61EF432A
+P 900 800
+F 0 "#PWR0121" H 900 650 50  0001 C CNN
+F 1 "+5VP" H 915 973 50  0000 C CNN
+F 2 "" H 900 800 50  0001 C CNN
+F 3 "" H 900 800 50  0001 C CNN
+	1    900  800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  800  900  1050
+$Comp
+L 0Keyhas_C0805_Basic:100nF C3
+U 1 1 61F0AB9C
+P 1700 3800
+F 0 "C3" H 1792 3846 50  0000 L CNN
+F 1 "100nF" H 1792 3755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1738 3650 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/YAGEO-CC0805KRX7R9BB104_C49678.pdf" V 1700 3800 50  0001 C CNN
+F 4 "C49678" V 1700 3800 50  0001 C CNN "LCSC"
+	1    1700 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 0Keyhas_C0805_Basic:100nF C4
+U 1 1 61F0DF2B
+P 3100 3800
+F 0 "C4" H 3192 3846 50  0000 L CNN
+F 1 "100nF" H 3192 3755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3138 3650 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/YAGEO-CC0805KRX7R9BB104_C49678.pdf" V 3100 3800 50  0001 C CNN
+F 4 "C49678" V 3100 3800 50  0001 C CNN "LCSC"
+	1    3100 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 0Keyhas_C0805_Basic:100nF C1
+U 1 1 61F0EA4F
+P 6450 5100
+F 0 "C1" H 6542 5146 50  0000 L CNN
+F 1 "100nF" H 6542 5055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6488 4950 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/YAGEO-CC0805KRX7R9BB104_C49678.pdf" V 6450 5100 50  0001 C CNN
+F 4 "C49678" V 6450 5100 50  0001 C CNN "LCSC"
+	1    6450 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 0Keyhas_C0805_Basic:100nF C5
+U 1 1 61F15EF7
+P 7600 2950
+F 0 "C5" V 7371 2950 50  0000 C CNN
+F 1 "100nF" V 7462 2950 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7638 2800 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/YAGEO-CC0805KRX7R9BB104_C49678.pdf" V 7600 2950 50  0001 C CNN
+F 4 "C49678" V 7600 2950 50  0001 C CNN "LCSC"
+	1    7600 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 6250 5050 6400
+Wire Wire Line
+	5050 5950 5050 6050
+$Comp
+L 0Keyhas_R0805_Basic:330R R1
+U 1 1 61F1CBBB
+P 900 1150
+F 0 "R1" H 959 1196 50  0000 L CNN
+F 1 "330R" H 959 1105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 830 1150 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0805W8F3300T5E_C17630.pdf" V 900 1150 50  0001 C CNN
+F 4 "C17630" V 900 1150 50  0001 C CNN "LCSC"
+	1    900  1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 0Keyhas_R0805_Basic:100k R2
+U 1 1 61F1D404
+P 5050 6150
+F 0 "R2" H 5109 6196 50  0000 L CNN
+F 1 "100k" H 5109 6105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4980 6150 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0805W8F1003T5E_C17407.pdf" V 5050 6150 50  0001 C CNN
+F 4 "C17407" V 5050 6150 50  0001 C CNN "LCSC"
+	1    5050 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 0Keyhas_R0805_Basic:100k R4
+U 1 1 61F1DE04
+P 6100 5050
+F 0 "R4" H 6159 5096 50  0000 L CNN
+F 1 "100k" H 6159 5005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6030 5050 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0805W8F1003T5E_C17407.pdf" V 6100 5050 50  0001 C CNN
+F 4 "C17407" V 6100 5050 50  0001 C CNN "LCSC"
+	1    6100 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L 0Keyhas_R0805_Basic:10k R3
+U 1 1 61F1E959
+P 5600 5500
+F 0 "R3" H 5659 5546 50  0000 L CNN
+F 1 "10k" H 5659 5455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5530 5500 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0805W8F1002T5E_C17414.pdf" V 5600 5500 50  0001 C CNN
+F 4 "C17414" V 5600 5500 50  0001 C CNN "LCSC"
+	1    5600 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 0Keyhas_LED_Basic:D_LED_0805_0805 D1
+U 1 1 61F218DF
+P 900 1500
+F 0 "D1" V 939 1382 50  0000 R CNN
+F 1 "D_LED_0805_0805" V 848 1382 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 900 1500 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Hubei-KENTO-Elec-Green-0805-Iv-207-249-mcd-atIF-20mA_C2297.pdf" V 900 1500 50  0001 C CNN
+F 4 "C2297" V 900 1500 50  0001 C CNN "LCSC"
+	1    900  1500
+	0    -1   -1   0   
+$EndComp
+Text Label 1700 2900 0    50   ~ 0
+RST
+Wire Wire Line
+	2050 2900 1550 2900
+$Comp
+L 0Keyhas_fuses:Polyfuse_16V_1.1A F1
+U 1 1 61EA7B6D
+P 5000 4900
+F 0 "F1" V 4900 4800 50  0000 C CNN
+F 1 "Polyfuse_16V_1.1A" V 5100 4900 50  0000 C CNN
+F 2 "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder" H 5050 4700 50  0001 L CNN
+F 3 "https://www.tme.eu/Document/f9b848db97c904deeb98e6f7f28be5c7/0ZCG+Nov2016.pdf" H 5000 4900 50  0001 C CNN
+F 4 "0ZCG0110AF2C" H 5000 4900 50  0001 C CNN "TME"
+	1    5000 4900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4700 4900 4900 4900
+Wire Wire Line
+	5100 4900 5400 4900
+$Comp
+L 0Keyhas_connector-header:HEADER-2.54-3pin-Vertical J3
+U 1 1 61F05CFA
+P 4800 1900
+F 0 "J3" H 4880 1942 50  0000 L CNN
+F 1 "HEADER-2.54-3pin-Vertical" H 4880 1851 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4800 1900 50  0001 C CNN
+F 3 "" H 4800 1900 50  0001 C CNN
+	1    4800 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0116
+U 1 1 61F06DE4
+P 4350 1800
+F 0 "#PWR0116" H 4350 1550 50  0001 C CNN
+F 1 "GND" H 4355 1627 50  0000 C CNN
+F 2 "" H 4350 1800 50  0001 C CNN
+F 3 "" H 4350 1800 50  0001 C CNN
+	1    4350 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 1800 4600 1800
+Wire Wire Line
+	4600 1900 4300 1900
+Wire Wire Line
+	4600 2000 4300 2000
+Text Label 4300 1900 0    50   ~ 0
+UART_RX
+Text Label 4300 2000 0    50   ~ 0
+UART_TX
+Wire Wire Line
+	3050 2900 3450 2900
+Wire Wire Line
+	3050 3000 3450 3000
+Text Label 3100 2900 0    50   ~ 0
+UART_TX
+Text Label 3100 3000 0    50   ~ 0
+UART_RX
+Text Notes 1650 4400 0    50   ~ 0
+https://github.com/rubienr/wemos-d1-mini-kicad
+Text Notes 1100 1700 0    50   ~ 0
+Output Power Indication\n
+Text Notes 6800 950  0    50   ~ 0
+PS4 Output\n
+Text Notes 7100 3600 0    50   ~ 0
+USB Flashdisk\n
+Text Notes 700  6200 0    71   ~ 0
+History\n20.01.2022 - 1.0 - First Issue\nInspired by https://github.com/stooged/PS4-Server-900u
+Text Notes 7100 7000 0    71   ~ 0
+Power control for USB Flashdisk, controlled by ESP8266 (pin D7)\nSupport ESP8266, v.3.0.0 or similar\nMax USB output current is limited by fuse 1A. 
+$EndSCHEMATC
