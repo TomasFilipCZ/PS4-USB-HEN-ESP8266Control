@@ -27,17 +27,17 @@ USB Drive for PS4-USB-HEN needs to be properly installed with ChendoChap Kernel 
 
 ## Setup
 - Setup once USB Flash disk
-Instructions can be found on ChendoChap PS4 GitHub or generally on internet, alternatively to Win32Disk Imager can be recommend [Rufus utility](https://rufus.ie/en/ "Rufus")   in both solution choose as USB Image  <b>exfathax_pico.img file<b>. 
+Instructions can be found on ChendoChap PS4 GitHub or generally on internet, alternatively to Win32Disk Imager can be recommend [Rufus utility](https://rufus.ie/en/ "Rufus")   in both solution choose as USB Image  <b>exfathax_pico.img file</b>. 
 
 - Setup once ESP8266
 Either by Arduino IDE or [NodeMCU-PyFlasher](https://github.com/marcelstoer/nodemcu-pyflasher/releases), manual for programming ESP8266 with USB cable with PC can be find easily on internet. (with USB cable plug into ESP8266 board)
 
-- Plug ESP8266 Board into PS4-USB-HEN, micro USB cable to PS4 and PS4-USB_HEN micro USB port. Due Webserver/DNS capability of ESP8266 web page with HEN  can be access through 'User Guide/Helpful Info' in PS4  <i>(required successful Wifi connection to ESP8266, if is not changed, access point is 'PS4_WEB_AP' , password is 'password'<i> )
+- Plug ESP8266 Board into PS4-USB-HEN, micro USB cable to PS4 and PS4-USB_HEN micro USB port. Due Webserver/DNS capability of ESP8266 web page with HEN  can be access through 'User Guide/Helpful Info' in PS4  <i>(required successful Wifi connection to ESP8266, if is not changed, access point is 'PS4_WEB_AP' , password is 'password'</i> )
 
 ## Pictures
 ![PS4-USB-HEN v1.0b](/screenshots/PS4-USB-HEN_v10b.png)
 
-![WeMos ESP8266 v3 with mounting holes](/screenshots/1.png "WeMos ESP8266")
+![WeMos ESP8266 v3 with mounting holes](/screenshots/WeMos_ESP8266_v3.jpg)
 
 ![Bundle Ilustration (will be replaced with real picture)](/screenshots/bundle-ilustration.png)
 
