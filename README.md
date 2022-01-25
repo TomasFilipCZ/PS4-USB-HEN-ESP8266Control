@@ -32,7 +32,7 @@ Instructions can be found on ChendoChap PS4 GitHub or generally on internet, alt
 - Setup once ESP8266
 Either by Arduino IDE or [NodeMCU-PyFlasher](https://github.com/marcelstoer/nodemcu-pyflasher/releases), manual for programming ESP8266 with USB cable with PC can be find easily on internet. (with USB cable plug into ESP8266 board)
 
-- Plug ESP8266 Board into PS4-USB-HEN, micro USB cable to PS4 and PS4-USB_HEN micro USB port. Due Webserver/DNS capability of ESP8266 web page with HEN  can be access through 'User Guide/Helpful Info' in PS4  <i>(required successful Wifi connection to ESP8266, if is not changed, access point is 'PS4_WEB_AP' , password is 'password'</i> )
+- Plug ESP8266 Board into PS4-USB-HEN, micro USB cable to PS4 and PS4-USB_HEN micro USB port. Due Webserver/DNS capability of ESP8266 web page with HEN  can be access through 'User Guide/Helpful Info' in PS4  <i>(required successful Wifi connection to ESP8266, if is not changed, access point is 'PS4_WEB_AP' , password is 'password' or '12345678</i> )
 
 ## Pictures
 ![PS4-USB-HEN v1.0b](/screenshots/PS4-USB-HEN_v10b.png)
@@ -59,6 +59,7 @@ Either by Arduino IDE or [NodeMCU-PyFlasher](https://github.com/marcelstoer/node
 **Tomas Filip**
 
 - [Profile](https://github.com/TomasFilipCZ "Tomas Filip on GitHub")
+- [Join us on Discord](https://discord.gg/DWephJvzwR "Discord Server")
 
 ## 🤝 Support
 
